@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>YJJJJ</title>
-</head>
-<body>
-<h1>{{ object_list }}</h1>
-{% for obj in object_list %}
-<h2>{{ obj.id }}</h2>
-<h2>{{ obj.order_dt }}</h2>
-<h2>{{ obj.order_name }}</h2>
-<h2>{{ obj.order_phone }}</h2>
-{% endfor %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>Данные из индекса</h2>
+
+<img src="{% static 'img/1.jpg' %}" height="300">
+
+{% include 'index_old.html' %}
+
+{% endblock %}
+
